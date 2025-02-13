@@ -1,2 +1,2 @@
 # Full-Stack-Open
-for Full stack web development
+for studying full stack web development via the open university website
