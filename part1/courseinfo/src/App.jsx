@@ -9,47 +9,21 @@ const Content = (props) => {
   console.log(props)
   return (
     <div>
-      <Part1 part1 = {props.parts[0].name} exercises1 = {props.parts[0].exercises}/>
-      <Part2 part2 = {props.parts[1].name} exercises2 = {props.parts[1].exercises}/>
-      <Part3 part3 = {props.parts[2].name} exercises3 = {props.parts[2].exercises}/>
+      <Part part={props.parts[0]} />
+      <Part part={props.parts[1]} />
+      <Part part={props.parts[2]} />
     </div>
   )
 }
 
-const Part1 = (props) => {
-  //rendering part1 and the number of exercises
-  return (
-      <p>
-        {props.part1} {props.exercises1}
-      </p>
-  )
-}
+const Part = (props) => (
+  <p>
+    {props.part.name} {props.part.exercises}
+  </p>
+)
 
-const Part2 = (props) => {
-  //rendering part2 and the number of exercises
-  return (
-      <p>
-        {props.part2} {props.exercises2}
-      </p>
-  )
-}
-
-const Part3 = (props) => {
-  //rendering part3 and the number of exercises
-  return (
-      <p>
-        {props.part3} {props.exercises3}
-      </p>
-  )
-}
-
-const Total = (props) => {
-  //rendering the total number of exercises
-  return (
-    <p>Number of exercises {props.parts[0].exercises + props.parts[1].exercises + props.parts[2].exercises}</p>
-  )
-}
-
+const Total = (props) => <p>Number of exercises {props.total}</p>
+  
 const App = () => {
   const course = {
     name: 'Half Stack application development',
@@ -73,7 +47,12 @@ const App = () => {
     <div>
       <Header course = {course.name} />
       <Content parts = {course.parts} />
-      <Total parts = {course.parts} />
+      <Total  total = {
+          course.parts[0].exercises +
+          course.parts[1].exercises +
+          course.parts[2].exercises
+        } 
+      />
     </div>
   )
 }
