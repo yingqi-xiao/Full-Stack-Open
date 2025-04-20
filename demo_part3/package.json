@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yingqi-xiao/Full-Stack-Open.git"
+  },
+  "keywords": [
+    "backend_with_Node.js"
+  ],
+  "author": "Yingqi Xiao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yingqi-xiao/Full-Stack-Open/issues"
+  },
+  "homepage": "https://github.com/yingqi-xiao/Full-Stack-Open#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
