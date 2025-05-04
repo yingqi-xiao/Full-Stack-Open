@@ -1,0 +1,1 @@
+GET https://full-stack-open-part3-backend-ljz0.onrender.com/info
