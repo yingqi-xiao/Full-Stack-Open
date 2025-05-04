@@ -30,6 +30,10 @@ morgan.token('body', (req, res) => {
 app.use(express.json())
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms :body'))
 
+const path = require('path')
+// Serve static frontend
+app.use(express.static('dist'))
+
 app.get('/api/persons', (request, response) => {
     response.json(persons)
 })
